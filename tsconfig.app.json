@@ -1,0 +1,15 @@
+// tsconfig.app.json
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      /* Vite 客户端类型 */
+      "types": ["vite/client"]
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.vue",
+      "src/**/*.tsx",
+      "env.d.ts"
+    ]
+  }
+  
