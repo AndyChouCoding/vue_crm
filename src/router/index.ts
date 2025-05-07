@@ -51,16 +51,14 @@ import {
     routes,
   });
   
-  // 全局守卫：根据 meta.requiresAuth 拦截未登录访问
+
   router.beforeEach((to, _from, next) => {
     const auth = useAuthStore();
     const isLoggedIn = !!auth.user;
   
     if (to.meta.requiresAuth && !isLoggedIn) {
-      // 访问受保护页面，且未登录 → 重定向到 Login
       next({ name: "Login" });
     } else if (to.name === "Login" && isLoggedIn) {
-      // 已登录还想进 Login → 重定向到 Dashboard
       next({ name: "Dashboard" });
     } else {
       next();

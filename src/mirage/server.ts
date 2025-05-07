@@ -25,18 +25,28 @@ export function makeServer() {
     seeds(server) {
       server.db.loadData({
         users: [
-          { id:'manager0', name:'Manager',     username:'manager', password:'123456', role:'manager', photo:'/images/user/manager.jpeg' },
-          { id:'agent0',   name:'Alice Agent', username:'agent',   password:'123456',    role:'agent',   photo:'/images/user/agent.jpeg' }
+          { id:'manager0', name:'A Manager',username:'manager', password:'123456', role:'manager', photo:'/images/user/manager.jpeg' },
+          { id:'manager1', name:'B Manager',username:'manager1', password:'123456', role:'manager', photo:'/images/user/manager.jpeg' },
+          { id:'manager2', name:'C Manager',username:'manager2', password:'123456', role:'manager', photo:'/images/user/manager.jpeg' },
+          { id:'agent0',   name:'A Agent', username:'agent',   password:'123456', role:'agent',   photo:'/images/user/agent.jpeg' },
+          { id:'agent1',   name:'B Agent', username:'agent1',   password:'123456', role:'agent',   photo:'/images/user/agent.jpeg' },
+          { id:'agent2',   name:'C Agent', username:'agent2',   password:'123456', role:'agent',   photo:'/images/user/agent.jpeg' },
         ]
       });
       server.db.customers.insert([
-        { id:'cust1', name:'John Doe',   agentId:'agent0', photo:'/images/user/default.png' },
-        { id:'cust2', name:'Jane Smith', agentId:'agent0', photo:'/images/user/default.png' }
+        { id:'cust1', name:'John Doe',   agentId:'agent0', photo:'/images/customer/c1.png' },
+        { id:'cust2', name:'Jane Smith', agentId:'agent0', photo:'/images/customer/c2.png' },
+        { id:'cust3', name:'John Cena',   agentId:'agent1', photo:'/images/customer/c3.png' },
+        { id:'cust4', name:'Jason Smith', agentId:'agent1', photo:'/images/customer/c4.png' },
+        { id:'cust5', name:'Johnny Walker',   agentId:'agent1', photo:'/images/customer/c5.png' },
+        { id:'cust6', name:'Bill Jane', agentId:'agent2', photo:'/images/customer/c6.png' },
+        { id:'cust7', name:'Johnny Chou',   agentId:'agent2', photo:'/images/customer/c7.png' },
+        { id:'cust8', name:'Bella Wang', agentId:'agent2', photo:'/images/customer/c8.png' },
       ]);
       const now = new Date().toISOString();
       server.db.tickets.insert([
         { id:'t1', subject:'問題A', status:'pending', createdAt:now, customerId:'cust1', agentId:'agent0' },
-        { id:'t2', subject:'問題B', status:'open',    createdAt:now, customerId:'cust2', agentId:'agent0' }
+        { id:'t2', subject:'問題B', status:'open',    createdAt:now, customerId:'cust2', agentId:'agent0' },
       ]);
       server.db.messages.insert([]);
     },
