@@ -1,10 +1,10 @@
-<!-- src/components/Layout.vue -->
+
 <template>
     <div>
       <!-- Header -->
       <div class="bg-red-50 py-4">
         <div class="mx-auto w-[1200px] flex justify-between items-center">
-          <div class="text-xl font-bold">CRM</div>
+          <div class="text-xl font-bold" @click="onDashboard">CRM</div>
           <div v-if="auth.user" class="flex items-center space-x-4">
             <span>已登入時長: {{ elapsedTime }}</span>
             <button @click="onLogout" class="text-red-600">Logout</button>
@@ -28,13 +28,11 @@
       const auth = useAuthStore()
       const router = useRouter()
   
-      // 记录登录时间戳
       const loginTs = ref<number>(Date.now())
       const elapsedTime = ref<string>('00:00:00')
       let timer: number
   
       onMounted(() => {
-        // 只有登录后才启动计时
         if (auth.user) {
           loginTs.value = Date.now()
           timer = window.setInterval(() => {
@@ -58,8 +56,11 @@
         auth.logout()
         router.push('/login')
       }
+      function onDashboard () {
+        router.push('/dashboard')
+      }
   
-      return { auth, elapsedTime, onLogout }
+      return { auth, elapsedTime, onLogout,onDashboard }
     }
   })
   </script>

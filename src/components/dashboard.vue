@@ -2,8 +2,12 @@
     <div class="p-10">
       <!-- 第一行 -->
       <div class="grid grid-cols-3 gap-6 mb-10">
-        <div class="p-4 h-[200px] text-center border rounded-xl">
+        <div
+          class="p-4 h-[200px] text-center border rounded-xl cursor-pointer hover:bg-gray-100 transition"
+          @click="goToMessage"
+        >
           User
+          <p>客戶名單</p>
         </div>
         <div class="p-4 h-[200px] text-center border rounded-xl">
           代辦事項
@@ -49,9 +53,18 @@
   
   <script lang="ts">
   import { defineComponent } from 'vue'
+  import { useRouter } from 'vue-router';
   
   export default defineComponent({
-    name: 'Dashboard'
+    name: 'Dashboard',
+    setup() {
+      const router = useRouter();
+      function goToMessage() {
+        router.push({ name: 'MessageCenter' });
+      }
+  
+      return { goToMessage };
+    }
   })
   </script>
   

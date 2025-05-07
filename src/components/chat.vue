@@ -40,7 +40,7 @@
   </template>
   
   <script lang="ts">
-  import { defineComponent, ref, watch, onMounted } from 'vue'
+  import { defineComponent, ref, watch, } from 'vue'
   
   type Status = '處理中'|'已完成'|'未處理'
   type From   = 'agent'|'user'
