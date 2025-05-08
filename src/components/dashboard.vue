@@ -4,7 +4,7 @@
       <div class="grid grid-cols-3 gap-6 mb-10">
         <div
           class="p-4 h-[200px] bg-[#f5f3f9] border-0 rounded-xl cursor-pointer hover:bg-gray-100 transition"
-          @click="goToMessage"
+          
         >
           <div class="flex justify-between">
             <div >
@@ -17,18 +17,19 @@
           </div>
           <div class="h-1 border-b-2 mb-1"></div>
           <!-- manager -->
-          <div v-if="auth.user?.role ==='manager'" class="p-2">
+          <div v-if="auth.user?.role ==='manager'" class="p-2 flex justify-between">
             <ul>
-                <li><a href="">負責帳號</a></li>
+                <li><a href="" @click="goToMessage">負責帳號</a></li>
                 <li><a href="">全部帳號</a></li>
                 <li><a href="">負責標籤</a></li>
                 <li><a href="">無參與分配</a></li>
             </ul>
+            <div @click="goToNewComponents">newComponents</div>
           </div>
           <!-- agent -->
           <div v-else  class="p-2">
             <ul>
-                <li><a href="">負責帳號</a></li>
+                <li><a href="" @click="goToMessage">負責帳號</a></li>
                 
                 <li><a href="">負責標籤</a></li>
                 
@@ -91,8 +92,10 @@
       function goToMessage() {
         router.push({ name: 'MessageCenter' });
       }
-
-      return { goToMessage, auth, };
+      function goToNewComponents () {
+        router.push({ name: 'NewComponents'})
+      }
+      return { goToMessage,goToNewComponents, auth, };
     }
   })
   </script>

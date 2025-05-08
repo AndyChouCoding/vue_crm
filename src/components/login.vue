@@ -1,7 +1,8 @@
 <template>
-    <div class="h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-gray-100">
+    <div class="h-screen flex items-center justify-center">
       <form @submit.prevent="onSubmit" class="bg-white p-8 rounded shadow">
-        <h2 class="text-2xl mb-4">Login</h2>
+        <h2 class="text-2xl mb-4">CRM Login</h2>
         <input
           v-model="username"
           placeholder="Username"
@@ -21,29 +22,33 @@
         >
           Login
         </button>
+        <div class="mt-2">
+          <p>可使用帳號manager & agent登入</p>
+          <p>密碼皆為123456</p>
+        </div>
       </form>
     </div>
-  </template>
-  
-  <script lang="ts">
-  import { ref } from 'vue'
-  import { useRouter } from 'vue-router'
-  import { useAuthStore } from '../stores/auth'
-  
-  export default {
-    setup() {
-      const username = ref('')
-      const password = ref('')
-      const auth = useAuthStore()
-      const router = useRouter()
-  
-      async function onSubmit() {
-        await auth.login(username.value, password.value)
-        router.push({name: 'Dashboard'})
-      }
-  
-      return { username, password, onSubmit }
+  </div>
+</template>
+
+<script lang="ts">
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { useAuthStore } from "../stores/auth";
+
+export default {
+  setup() {
+    const username = ref("");
+    const password = ref("");
+    const auth = useAuthStore();
+    const router = useRouter();
+
+    async function onSubmit() {
+      await auth.login(username.value, password.value);
+      router.push({ name: "Dashboard" });
     }
-  }
-  </script>
-  
+
+    return { username, password, onSubmit };
+  },
+};
+</script>

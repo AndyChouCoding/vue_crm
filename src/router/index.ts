@@ -9,6 +9,7 @@ import {
   import Layout from "../components/layout.vue";
   import Dashboard from "../components/dashboard.vue";
   import MessageCenter from "../components/messageCenter.vue";
+  import NewComponents from "../components/newComponents.vue"
   
   const routes: RouteRecordRaw[] = [
     {
@@ -36,6 +37,12 @@ import {
           component: MessageCenter,
           meta: { requiresAuth: true },
         },
+        {
+            path: "new_components",
+            name: "NewComponents",
+            component: NewComponents,
+            meta: { requiresAuth: true },
+          },
 
       ],
     },

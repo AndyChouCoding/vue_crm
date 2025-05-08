@@ -5,6 +5,7 @@
       <div class="bg-[#f8bf43] py-4">
         <div class="mx-auto w-[1200px] flex justify-between items-center">
           <div class="text-xl font-bold text-[#8a69f7] " @click="onDashboard">CRM</div>
+          <div></div>
           <div v-if="auth.user" class="flex items-center space-x-4">
             <span>已登入時長: {{ elapsedTime }}</span>
             <button @click="onLogout" class="text-red-600">Logout</button>
