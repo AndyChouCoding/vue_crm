@@ -184,7 +184,21 @@
                 </div>
                 <div>2</div>
               </div>
-              <div>css</div>
+              <!-- css setting -->
+              <div class="bg-gray-200 p-2 rounded-xl my-2">
+                <div class="border rounded-xl my-1 bg-[#f4eafe] text-[#6a529c]">
+                    <input type="checkbox" name="" id="dd" class="m-2 personal" />
+                    <label for="dd">自訂</label>
+                </div>
+                <div class="border rounded-xl my-1 bg-[#f4e8d1] text-[#726f70]">
+                    <input type="checkbox" name="" id="ee" class="m-2 css_personal" />
+                    <label for="ee">CSS</label>
+                </div>
+                <div class="border rounded-xl my-1 bg-[#144a6e] text-[#fff]">
+                    <input type="checkbox" name="" id="ff" class="m-2 css_style" />
+                    <label for="ff">樣式</label>
+                </div>
+              </div>
               <!-- login btn -->
               <div class="bg-gray-200 p-2 rounded-xl">
                 <div class="bg-white text-center flex justify-center">
@@ -231,8 +245,7 @@
                     >
                       <path
                         d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                      /></svg
-                    >使用手機號碼登入
+                      /></svg>使用手機號碼登入
                   </button>
                 </div>
               </div>
@@ -247,13 +260,13 @@
                 </div>
                 <div>
                   <div>
-                    <input type="checkbox" name="" id="aa" class="m-2" /><label
+                    <input type="checkbox" name="" id="aa" class="m-2 simple" /><label
                       for="aa"
                       >同意使用條款</label
                     >
                   </div>
                   <div>
-                    <input type="checkbox" name="" id="bb" class="m-2" /><label
+                    <input type="checkbox" name="" id="bb" class="m-2 simple" /><label
                       for="bb"
                       >同意隱私權條款</label
                     >
@@ -269,13 +282,28 @@
                   />
                 </div>
                 <div>
-                  <input type="checkbox" name="" id="cc" class="m-2" /><label
+                  <input type="checkbox" name="" id="cc" class="m-2 simple" /><label
                     for="cc"
                     >選擇題顯示圖片</label
                   >
                 </div>
               </div>
-              <div>上傳圖片檔案</div>
+              <!-- 上傳圖片檔案 -->
+              <div class=" bg-gray-200 p-2">
+                    <div>
+                        <p>上傳圖片檔案</p>
+                    </div>
+                    <div class="bg-white">
+                        <div class="flex border-b-2 border-gray-100">
+                            <div>icon</div>
+                            <div>icon</div>
+                        </div>
+                        <div>
+                            <div>icon</div>
+                            <div>點擊檔案上傳或選取檔案放入</div>
+                        </div>
+                    </div>
+              </div>
             </div>
           </div>
         </div>
@@ -300,8 +328,20 @@
 </template>
 
 <style>
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   accent-color: #2f4057;
+} */
+.simple {
+    accent-color: #2f4057;
+}
+.personal {
+    accent-color: #6b51c5;
+}
+.css_personal {
+    accent-color: #333e53;
+}
+.css_style {
+    accent-color: #fff;
 }
 </style>
 
