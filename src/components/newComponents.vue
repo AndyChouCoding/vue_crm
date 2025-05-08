@@ -118,10 +118,57 @@
             表單Form
           </div>
           <div class="flex justify-between px-2">
-            <div>
-              <div>填寫期限</div>
-              <div>總填寫次數</div>
-              <div>個人填寫次數</div>
+            <div class="w-[200px]">
+              <div class="bg-gray-200 p-2 rounded-md">
+                <div class="flex  items-center">
+                    <h2 class="p-2 ">填寫期限(開始)</h2>
+                    <div class="bg-[#ebecf2] text-[#aeb1bf] ml-2 p-2 rounded-md">
+                        <p class="text-[12px] items-center">選填</p>
+                    </div>
+                </div>
+                <div class="flex items-center bg-white rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3 mx-2" viewBox="0 0 16 16">
+                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"/>
+                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                    </svg>
+                    <input class="text-[12px]" type="datetime-local" name="" id="">
+                </div>
+                <div class="flex items-center">
+                    <h2 class="p-2 ">填寫期限(結束)</h2>
+                    <div class="bg-[#ebecf2] text-[#aeb1bf] ml-2 p-2 rounded-md">
+                        <p class="text-[12px] items-center">選填</p>
+                    </div>
+                </div>
+                <div class="flex items-center bg-white rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3 mx-2" viewBox="0 0 16 16">
+                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"/>
+                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                    </svg>
+                    <input class="text-[12px]" type="datetime-local" name="" id="">
+                </div>
+              </div>
+              <div class="bg-gray-200 mt-2 p-2">
+                <h2>總填寫次數</h2>
+                <div class="bg-white p-1 rounded-md">
+                    <div class="border-b-1 m-2"><input type="radio" name="" id="count"><label for="count">不限次數</label></div>
+                    <div class="m-2">
+                        <input type="radio" name="" id="limit_count"><label for="limit_count">限制次數</label>
+                        <div class="flex justify-end ">
+                            <input type="text" class="w-[100px] h-[30px] border-[1px] border-r-0 rounded-s-md"><p class="px-1 h-[30px] w-[30px] border-[1px] rounded-e-xl">次</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>個人填寫次數</h2>
+                <div class="bg-white p-1 rounded-md">
+                    <div class="border-b-1 m-2"><input type="radio" name="" id="count"><label for="count">不限次數</label></div>
+                    <div class="m-2">
+                        <input type="radio" name="" id="limit_count"><label for="limit_count">限制次數</label>
+                        <div class="flex justify-end ">
+                            <input type="text" class="w-[100px] h-[30px] border-[1px] border-r-0 rounded-s-md"><p class="px-1 h-[30px] w-[30px] border-[1px] rounded-e-xl">次</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </div>
             <div>
               <div class="flex justify-between">
@@ -182,7 +229,10 @@
                     <input type="radio" name="" id="" />
                   </div>
                 </div>
-                <div>2</div>
+                <div>
+                    <div></div>
+                    <div>邏輯跳題</div>
+                </div>
               </div>
               <!-- css setting -->
               <div class="bg-gray-200 p-2 rounded-xl my-2">
@@ -331,6 +381,10 @@
 /* input[type="checkbox"] {
   accent-color: #2f4057;
 } */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  /* 或者 background: none; */
+}
 .simple {
     accent-color: #2f4057;
 }
