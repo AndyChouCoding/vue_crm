@@ -25,6 +25,9 @@
         <div class="mt-2">
           <p>可使用帳號manager & agent登入</p>
           <p>密碼皆為123456</p>
+          <p>登入後的newComponets的部分</p>
+          <p>有2025年公司的新元件產品的仿作頁</p>
+          <p>依據 <a href="https://www.youtube.com/watch?v=hLKnSkJ878E&t=3616s">公司的Youtube</a> 的影片內容去實作出來</p>
         </div>
       </form>
     </div>

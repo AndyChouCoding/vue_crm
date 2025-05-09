@@ -3,7 +3,7 @@
     <div>
       <!-- Header -->
       <div class="bg-[#f8bf43] py-4">
-        <div class="mx-auto w-[1200px] flex justify-between items-center">
+        <div class="mx-auto my-[0] w-[1200px] flex justify-between items-center">
           <div class="text-xl font-bold text-[#8a69f7] " @click="onDashboard">CRM</div>
           <div></div>
           <div v-if="auth.user" class="flex items-center space-x-4">
@@ -14,7 +14,7 @@
       </div>
       <!-- Main Content -->
       <div class="mx-auto bg-[#fbf8f6] min-h-[calc(100vh-4rem)] p-4">
-        <div class=" w-[1200px]">
+        <div class=" w-[1200px] mx-auto my-[0]">
             <router-view/>
         </div>
       </div>

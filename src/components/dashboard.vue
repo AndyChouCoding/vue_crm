@@ -19,12 +19,12 @@
           <!-- manager -->
           <div v-if="auth.user?.role ==='manager'" class="p-2 flex justify-between">
             <ul>
-                <li><a href="" @click="goToMessage">負責帳號</a></li>
+                <li><a href="" @click="goToMessage" class="btn_hover">負責帳號</a></li>
                 <li><a href="">全部帳號</a></li>
                 <li><a href="">負責標籤</a></li>
                 <li><a href="">無參與分配</a></li>
             </ul>
-            <div @click="goToNewComponents">newComponents</div>
+            <button @click="goToNewComponents" class="btn_hover h-[30px] p-2 bg-gray-500 flex items-center rounded-md">newComponents</button>
           </div>
           <!-- agent -->
           <div v-else  class="p-2">
@@ -100,3 +100,10 @@
   })
   </script>
   
+  <style>
+    .btn_hover:hover{
+        opacity: 90%;
+        background: #c5c5c5;
+        
+    }
+  </style>
